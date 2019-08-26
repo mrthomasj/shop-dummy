@@ -1,5 +1,28 @@
 
-
+$(document).ready(function(){
+    $("#type").change(
+        function(){
+            if($(this).val() == "frn"){
+                $('.form_fornec').show();
+                $('.form_pf').hide();
+                $('.form_pj').hide();
+            }
+            else if($(this).val() == "pf"){
+                
+                $('.form_pf').show();
+                $('.form_fornec').hide();
+                $('.form_pj').hide();
+            }
+            else if($(this).val() == "pj"){
+                
+                $('.form_fornec').hide();
+                $('.form_pf').hide();
+                $('.form_pj').show();
+                
+            }
+        }
+    );
+});
 
 //ViaCEP Webservice
 $(document).ready(function() {
@@ -29,7 +52,7 @@ $(document).ready(function() {
             if(validacep.test(cep)) {
 
                 //Preenche os campos com "..." enquanto consulta webservice.
-                $("#log").val("...");
+                $("#rua").val("...");
                 $("#bairro").val("...");
                 $("#cidade").val("...");
                 $("#uf").val("...");
@@ -40,7 +63,7 @@ $(document).ready(function() {
 
                     if (!("erro" in dados)) {
                         //Atualiza os campos com os valores da consulta.
-                        $("#log").val(dados.logradouro);
+                        $("#rua").val(dados.logradouro);
                         $("#bairro").val(dados.bairro);
                         $("#cidade").val(dados.localidade);
                         $("#uf").val(dados.uf);

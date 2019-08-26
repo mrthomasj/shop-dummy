@@ -7,37 +7,18 @@
         
         <link rel="stylesheet" href="css/bootstrap-flatly.css">
         <link rel="stylesheet" href="css/custom-styles.css">
-        <script src=http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js></script>
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
         <script>
               // Form Manager
-$(document).ready(function(){
-    $("#type").change(
-        function(){
-            if($(this).val() == "frn"){
-                $('.form_fornec').show();
-                $('.form_pf').hide();
-                $('.form_pj').hide();
-            }
-            else if($(this).val() == "pf"){
-                
-                $('.form_pf').show();
-                $('.form_fornec').hide();
-                $('.form_pj').hide();
-            }
-            else if($(this).val() == "pj"){
-                
-                $('.form_fornec').hide();
-                $('.form_pf').hide();
-                $('.form_pj').show();
-                
-            }
-        }
-    );
-});
+
 
     
         </script>
-        <link type="text/javascript" href="js/custom.js">    
+        <script src="js/custom.js"></script>    
     </head>
 
     <body>
@@ -101,13 +82,38 @@ $(document).ready(function(){
                             <input class="form-control form-control-sm" type="text" name="cep" id="cep" required>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-10 col-form-label col-form-label-sm" for="log">Logradouro:</label>
-                            <label class="col-sm-2 col-form-label col-form-label-sm" for="nr">Número:</label>
+                            <label class="col-sm-9 col-form-label col-form-label-sm" for="rua">Logradouro:</label>
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="nr">Número:</label>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="col-sm-9 form-control form-control-sm" id="log" name="logradouro">
+                        <div class="form-group row">
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control form-control-sm" id="rua" name="logradouro">
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="nr" name="numero">
+                            </div>
+                            
                         </div>
 
+                        <div class="form-group row">
+                            <label class="col-sm-5 col-form-label col-form-label-sm" for="cidade">Cidade:</label>
+                            <label class="col-sm-4 col-form-label col-form-label-sm" for="bairro">Bairro:</label>
+                            <label class="col-sm-3 col-form-label col-form-label-sm" for="uf">UF:</label>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control form-control-sm" id="cidade" name="cidade">
+                            </div>
+                            
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control form-control-sm" id="bairro" name="bairro">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control form-control-sm" id="uf" name="uf">
+                            </div>
+                        </div>
+                        
 
                     </div>
 
@@ -126,7 +132,7 @@ $(document).ready(function(){
         
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
